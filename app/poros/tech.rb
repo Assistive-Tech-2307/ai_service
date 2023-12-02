@@ -5,7 +5,7 @@ class Tech
     @id = nil
     @category = category
     @title = data[:name]
-    @description = data[:description]
+    @description = data[:definition]
     @website = data[:website]
   end
 end

@@ -8,9 +8,9 @@ http_interactions:
       string: '{"model":"gpt-3.5-turbo","max_tokens":500,"messages":[{"role":"system","content":"You
         are a helpful assistant."},{"role":"user","content":"Please provide a cross-platform
         list of screen readers for people who are totaly blind and cannot use a mouse.
-        Please provide a definition of each tool and a website for further exploration.
-        Format your response as a JSON object, with each tech and it''s information
-        being a separate nested object"}]}'
+        Please provide a definition(called definition) of each tool and a website
+        for further exploration. Format your response as a JSON object, with each
+        tech and it''s information being a separate nested object"}]}'
     headers:
       Authorization:
       - Bearer open_ai_key
@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 02 Dec 2023 19:47:04 GMT
+      - Sat, 02 Dec 2023 22:09:05 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -44,7 +44,7 @@ http_interactions:
       Openai-Organization:
       - user-srbr3tydq7qzv8u1fvii8fnn
       Openai-Processing-Ms:
-      - '28380'
+      - '34688'
       Openai-Version:
       - '2020-10-01'
       Strict-Transport-Security:
@@ -58,55 +58,55 @@ http_interactions:
       X-Ratelimit-Remaining-Requests:
       - '9999'
       X-Ratelimit-Remaining-Tokens:
-      - '59417'
+      - '59412'
       X-Ratelimit-Remaining-Tokens-Usage-Based:
-      - '59417'
+      - '59412'
       X-Ratelimit-Reset-Requests:
       - 8.64s
       X-Ratelimit-Reset-Tokens:
-      - 583ms
+      - 588ms
       X-Ratelimit-Reset-Tokens-Usage-Based:
-      - 583ms
+      - 588ms
       X-Request-Id:
-      - 429a0c8b3465cdf6ef47d90fded1a0e0
+      - 12a4465bd8c9e04c46b2fb271a00e192
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=xbLrNV6jZrafH7Pd.S2SBj2fWwen3702YiszGCuaR2g-1701546424-0-AcNiaQpBbfaqoVo/yFPUSeqINziT5gxubw5LymbLErxV1YQCAfX1JK12aVU85zpP+fIq/lmwFk6Sqy3LyahqKik=;
-        path=/; expires=Sat, 02-Dec-23 20:17:04 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=qIcdCAAGXIdlCAb.SuoAWuuviFFHrNN_VO197ZK3qw4-1701554945-0-ARdaSZuFbvGZMLjpEc774A47eIq42lbGAw8mL+U5gOwyJZVYB3+xD5C9SdQAd5oMJRXjSGAnFDMn2yiHPdqVXKg=;
+        path=/; expires=Sat, 02-Dec-23 22:39:05 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=5Okstw2_qdSYSBT3ToR_zxcPXhyTY8yYGS6e542F88A-1701546424621-0-604800000;
+      - _cfuvid=CjLGUUtwF5NXqqiOWu9ujWt1A.DbHYXjRNIWnsZa_dY-1701554945899-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 82f613afee7a1f2e-DEN
+      - 82f6e391d89d1f29-DEN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |
         {
-          "id": "chatcmpl-8RQEex82Dqb7u2BaM4baGgjXEEDyJ",
+          "id": "chatcmpl-8RSRzSBaS6Cv3HLdylXUMvkKqkfsu",
           "object": "chat.completion",
-          "created": 1701546396,
+          "created": 1701554911,
           "model": "gpt-3.5-turbo-0613",
           "choices": [
             {
               "index": 0,
               "message": {
                 "role": "assistant",
-                "content": "{\n  \"screenReaders\": [\n    {\n      \"name\": \"NVDA\",\n      \"description\": \"NVDA (NonVisual Desktop Access) is a free and open-source screen reader for Microsoft Windows. It allows blind and visually impaired users to access and interact with the computer using speech synthesizers or braille displays.\",\n      \"website\": \"https://www.nvaccess.org/\"\n    },\n    {\n      \"name\": \"JAWS\",\n      \"description\": \"JAWS (Job Access with Speech) is a popular and powerful screen reader for Windows that provides speech and braille output. It offers comprehensive support for various applications and allows blind individuals to navigate the computer and access digital content effectively.\",\n      \"website\": \"https://www.freedomscientific.com/products/software/jaws/\"\n    },\n    {\n      \"name\": \"VoiceOver\",\n      \"description\": \"VoiceOver is a built-in screen reader available on Apple platforms, including macOS, iOS, iPadOS, and watchOS. It provides spoken and braille output, enabling blind or visually impaired users to operate their Apple devices by using gestures, keyboard shortcuts, or refreshable braille displays.\",\n      \"website\": \"https://www.apple.com/accessibility/voiceover/\"\n    },\n    {\n      \"name\": \"TalkBack\",\n      \"description\": \"TalkBack is an Android screen reader developed by Google. It assists blind and visually impaired users in navigating and interacting with Android devices. It provides spoken feedback and allows users to navigate through gestures, touch exploration, and keyboard shortcuts.\",\n      \"website\": \"https://support.google.com/accessibility/android/answer/6283677\"\n    }\n  ]\n}"
+                "content": "{\n  \"screenReaders\": [\n    {\n      \"name\": \"NVDA\",\n      \"definition\": \"NVDA (NonVisual Desktop Access) is a free, open-source screen reader for Windows. It allows blind and visually impaired users to interact with computers, browse the web, and access various applications.\",\n      \"website\": \"https://www.nvaccess.org/\"\n    },\n    {\n      \"name\": \"VoiceOver\",\n      \"definition\": \"VoiceOver is a built-in screen reader on Apple devices, including macOS, iOS, iPadOS, and watchOS. It provides spoken feedback and enables blind or low-vision individuals to navigate and operate Apple products effectively.\",\n      \"website\": \"https://www.apple.com/accessibility/voiceover/\"\n    },\n    {\n      \"name\": \"JAWS\",\n      \"definition\": \"JAWS (Job Access With Speech) is a widely used screen reader for Windows. It reads aloud the content on the screen and allows people who are blind or visually impaired to interact with applications, documents, emails, and websites.\",\n      \"website\": \"https://www.freedomscientific.com/products/software/jaws/\"\n    },\n    {\n      \"name\": \"TalkBack\",\n      \"definition\": \"TalkBack is an Android screen reader developed by Google. It provides spoken feedback and other accessibility features for blind and visually impaired users to navigate and use Android devices.\",\n      \"website\": \"https://support.google.com/accessibility/android/answer/6283677\"\n    },\n    {\n      \"name\": \"Orca\",\n      \"definition\": \"Orca is a screen reader and magnifier for the GNOME desktop environment on Linux. It provides access to applications and tools, allowing visually impaired users to use Linux-based systems effectively.\",\n      \"website\": \"https://wiki.gnome.org/Projects/Orca\"\n    }\n  ]\n}"
               },
               "finish_reason": "stop"
             }
           ],
           "usage": {
-            "prompt_tokens": 73,
-            "completion_tokens": 337,
-            "total_tokens": 410
+            "prompt_tokens": 77,
+            "completion_tokens": 377,
+            "total_tokens": 454
           },
           "system_fingerprint": null
         }
-  recorded_at: Sat, 02 Dec 2023 19:47:04 GMT
+  recorded_at: Sat, 02 Dec 2023 22:09:05 GMT
 recorded_with: VCR 6.2.0
