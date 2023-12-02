@@ -1,0 +1,112 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","max_tokens":500,"messages":[{"role":"system","content":"You
+        are a helpful assistant."},{"role":"user","content":"Please provide a cross-platform
+        list of screen readers for people who are totaly blind and cannot use a mouse.
+        Please provide a definition of each tool and a website for further exploration.
+        Format your response as a JSON object, with each tech and it''s information
+        being a separate nested object"}]}'
+    headers:
+      Authorization:
+      - Bearer open_ai_key
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.12
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 02 Dec 2023 19:47:04 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0613
+      Openai-Organization:
+      - user-srbr3tydq7qzv8u1fvii8fnn
+      Openai-Processing-Ms:
+      - '28380'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '10000'
+      X-Ratelimit-Limit-Tokens:
+      - '60000'
+      X-Ratelimit-Limit-Tokens-Usage-Based:
+      - '60000'
+      X-Ratelimit-Remaining-Requests:
+      - '9999'
+      X-Ratelimit-Remaining-Tokens:
+      - '59417'
+      X-Ratelimit-Remaining-Tokens-Usage-Based:
+      - '59417'
+      X-Ratelimit-Reset-Requests:
+      - 8.64s
+      X-Ratelimit-Reset-Tokens:
+      - 583ms
+      X-Ratelimit-Reset-Tokens-Usage-Based:
+      - 583ms
+      X-Request-Id:
+      - 429a0c8b3465cdf6ef47d90fded1a0e0
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=xbLrNV6jZrafH7Pd.S2SBj2fWwen3702YiszGCuaR2g-1701546424-0-AcNiaQpBbfaqoVo/yFPUSeqINziT5gxubw5LymbLErxV1YQCAfX1JK12aVU85zpP+fIq/lmwFk6Sqy3LyahqKik=;
+        path=/; expires=Sat, 02-Dec-23 20:17:04 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=5Okstw2_qdSYSBT3ToR_zxcPXhyTY8yYGS6e542F88A-1701546424621-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 82f613afee7a1f2e-DEN
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-8RQEex82Dqb7u2BaM4baGgjXEEDyJ",
+          "object": "chat.completion",
+          "created": 1701546396,
+          "model": "gpt-3.5-turbo-0613",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"screenReaders\": [\n    {\n      \"name\": \"NVDA\",\n      \"description\": \"NVDA (NonVisual Desktop Access) is a free and open-source screen reader for Microsoft Windows. It allows blind and visually impaired users to access and interact with the computer using speech synthesizers or braille displays.\",\n      \"website\": \"https://www.nvaccess.org/\"\n    },\n    {\n      \"name\": \"JAWS\",\n      \"description\": \"JAWS (Job Access with Speech) is a popular and powerful screen reader for Windows that provides speech and braille output. It offers comprehensive support for various applications and allows blind individuals to navigate the computer and access digital content effectively.\",\n      \"website\": \"https://www.freedomscientific.com/products/software/jaws/\"\n    },\n    {\n      \"name\": \"VoiceOver\",\n      \"description\": \"VoiceOver is a built-in screen reader available on Apple platforms, including macOS, iOS, iPadOS, and watchOS. It provides spoken and braille output, enabling blind or visually impaired users to operate their Apple devices by using gestures, keyboard shortcuts, or refreshable braille displays.\",\n      \"website\": \"https://www.apple.com/accessibility/voiceover/\"\n    },\n    {\n      \"name\": \"TalkBack\",\n      \"description\": \"TalkBack is an Android screen reader developed by Google. It assists blind and visually impaired users in navigating and interacting with Android devices. It provides spoken feedback and allows users to navigate through gestures, touch exploration, and keyboard shortcuts.\",\n      \"website\": \"https://support.google.com/accessibility/android/answer/6283677\"\n    }\n  ]\n}"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 73,
+            "completion_tokens": 337,
+            "total_tokens": 410
+          },
+          "system_fingerprint": null
+        }
+  recorded_at: Sat, 02 Dec 2023 19:47:04 GMT
+recorded_with: VCR 6.2.0
