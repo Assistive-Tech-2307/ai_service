@@ -7,6 +7,10 @@ class AiFacade
   def ai_chat(params)
     message = create_message(params)
     result = @service.chat_to_ai(message)
+    techs = JSON.parse(result[:choices].first[:message][:content], symbolize_names: true)[:screenReaders]
+    techs.map do |tech|
+      Tech.new(tech)
+    end
   end
 
   private
