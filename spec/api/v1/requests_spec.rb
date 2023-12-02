@@ -28,6 +28,7 @@ RSpec.describe "Request endpoints" do
       expect(result[:data].first[:attributes]).to have_key :title
       expect(result[:data].first[:attributes]).to have_key :description
       expect(result[:data].first[:attributes]).to have_key :website
+      expect(result[:data].first[:attributes]).to have_key :category
 
     end
   end
