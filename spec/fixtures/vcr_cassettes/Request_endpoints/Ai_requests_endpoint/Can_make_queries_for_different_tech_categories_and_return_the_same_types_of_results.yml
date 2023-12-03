@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","max_tokens":500,"messages":[{"role":"system","content":"You
+        are a helpful assistant."},{"role":"user","content":"Please provide a cross-platform
+        list of CCTV for people who have low vision. Please provide a definition of
+        each tool and a website for further exploration. Format your response as a
+        JSON object, with each tech and it''s information being a separate nested
+        object in the technologies array like so {''technologies''=\u003e[{''name''=\u003e''tool_name'',
+        ''definition''=\u003e''tool_definition'', ''website''=\u003e''tool_website''}]}"}]}'
+    headers:
+      Authorization:
+      - Bearer open_ai_key
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.12
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 03 Dec 2023 21:35:15 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0613
+      Openai-Organization:
+      - user-srbr3tydq7qzv8u1fvii8fnn
+      Openai-Processing-Ms:
+      - '12458'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '10000'
+      X-Ratelimit-Limit-Tokens:
+      - '60000'
+      X-Ratelimit-Limit-Tokens-Usage-Based:
+      - '60000'
+      X-Ratelimit-Remaining-Requests:
+      - '9999'
+      X-Ratelimit-Remaining-Tokens:
+      - '59391'
+      X-Ratelimit-Remaining-Tokens-Usage-Based:
+      - '59391'
+      X-Ratelimit-Reset-Requests:
+      - 8.64s
+      X-Ratelimit-Reset-Tokens:
+      - 609ms
+      X-Ratelimit-Reset-Tokens-Usage-Based:
+      - 609ms
+      X-Request-Id:
+      - 1c4bbb59f037d1535adfa3244e64806e
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=L.MG8kXw7L27EquMFTQ7fDqdfiuq1hyCahaJ0BHDglg-1701639315-0-AYML3YLMD/jsI/na2c9YK7MN1t5KBWHWQE1ykgqhk6HVF4vUgc2mm/J0b+kQaSPj0hPuiKTzffDmv89YA+8lgCo=;
+        path=/; expires=Sun, 03-Dec-23 22:05:15 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=2jebh21Sfxg_eRGD5IfYVHPCEqYELE1IuBjmr53.PtI-1701639315713-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 82feefec3dc751e5-DEN
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-8RoP93tcYi1ncxhMDKvsZysJklqRT",
+          "object": "chat.completion",
+          "created": 1701639303,
+          "model": "gpt-3.5-turbo-0613",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"technologies\": [\n    {\n      \"name\": \"OrCam MyEye\",\n      \"definition\": \"A wearable assistive technology device that helps people with low vision to read text, recognize faces, identify products, and more. It uses a small camera to capture visual information and a built-in speaker to provide audio feedback.\",\n      \"website\": \"https://www.orcam.com\"\n    },\n    {\n      \"name\": \"eSight\",\n      \"definition\": \"A pair of electronic glasses that enhance the vision for people with low vision. It uses a high-resolution camera to capture the surrounding environment and displays the video feed on OLED screens in front of the user's eyes, providing a clearer view.\",\n      \"website\": \"https://www.esighteyewear.com\"\n    },\n    {\n      \"name\": \"Vispero\",\n      \"definition\": \"An assistive technology company that offers various CCTV solutions for people with low vision. Their CCTV systems use advanced camera technology and software to magnify and enhance the visual details of reading materials, objects, and distance viewing.\",\n      \"website\": \"https://www.vispero.com\"\n    },\n    {\n      \"name\": \"ZoomText\",\n      \"definition\": \"A screen magnifier and reader software that helps people with low vision to see and navigate computer screens more easily. It offers various magnification options, color enhancements, and text-to-speech functionality.\",\n      \"website\": \"https://www.zoomtext.com\"\n    },\n    {\n      \"name\": \"HumanWare Prodigi\",\n      \"definition\": \"A portable video magnifier that combines optical and digital magnification with text-to-speech capabilities. It allows people with low vision to view printed materials, images, and objects with adjustable magnification levels and customizable reading settings.\",\n      \"website\": \"https://www.humanware.com\"\n    }\n  ]\n}"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 96,
+            "completion_tokens": 382,
+            "total_tokens": 478
+          },
+          "system_fingerprint": null
+        }
+  recorded_at: Sun, 03 Dec 2023 21:35:15 GMT
+recorded_with: VCR 6.2.0
