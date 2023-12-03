@@ -4,8 +4,8 @@ class Tech
   def initialize(data, category)
     @id = nil
     @category = category
-    @title = data[:name]
-    @description = data[:definition]
+    @title = data[:name] || data[:title]
+    @description = data[:definition] || data[:description]
     @website = data[:website]
   end
 end
