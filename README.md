@@ -1,24 +1,42 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is built as a microservice to handle communications with OpenAi specifically in the search for assistive technologies. A FE app or other service can call the endpoints to get data on technologies that can assist individuals with different kinds of disabilities. Data is formatted for ease of use by breaking each technology down into a different object with attributes describing the tech. 
 
-Things you may want to cover:
+## Ruby version<br>
+ruby 3.2.2
 
-* Ruby version
+## System dependencies
+- Dependencies are contained in Gemfile, run `bundle` after cloning repo to install all dependencies
 
-* System dependencies
+## Configuration
+- After cloning repo to your own directory run commands in terminal:
+- `bundle install`
+- `rails db:create`
+- To run the server in development env:
+- `rails s`
 
-* Configuration
+## Tests
+- to run the test run in terminal:
+- `bundle exec rspec`
 
-* Database creation
+## Services
+- Uses OpenAi as a chat service to get back dynamic responses on technologies, can easily be swapped out for another Ai chat services by modifying the base endpoint contained in services/ai_service.rb
+#### Get your own OpenAi api key here https://openai.com/
+- create an account or log-in, then request a new api_key through their dashboard
+- Hide your new key by typing `EDITOR="code --wait" rails credentials:edit`
+- when the file opens save your new key as<br>
+`open_ai:`<br>
+&nbsp; `key: "Your key here"`
 
-* Database initialization
+## Endpoints
+### POST Endpoints
+#### "/api/v1/ai_requests"
+- pass params in the body of the request
+- required params {"tech_needs":[], "disability_description": []}
+- even if only 1 parameter is submitted the value for each key must be an Array
+- returns assistive technologies that the AI finds for the given tech needs and disability description
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Contributors
+- Nick Spencer <a href="https://github.com/deadbert">@github.com/deadbert</a>
+- Joop Stark <a href="https://github.com/JoopStark">@github.com/JoopStart</a>
+- Eliza Keating <a href="https://github.com/elizakeating">@github.com/elizakeating</a>
