@@ -17,7 +17,7 @@ class AiService
   def chat_to_ai(message)
     payload = {
       model: "gpt-3.5-turbo",
-      max_tokens: 500,
+      max_tokens: 700,
       messages: [
         {
           role: "system",
