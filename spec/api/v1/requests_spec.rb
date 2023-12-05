@@ -59,7 +59,6 @@ RSpec.describe "Request endpoints" do
       expect(result[:data].first[:attributes]).to have_key :website
       expect(result[:data].first[:attributes]).to have_key :category
 
-      require 'pry';binding.pry
     end
   end
 end
