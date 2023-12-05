@@ -16,7 +16,8 @@ class AiService
 
   def chat_to_ai(message)
     payload = {
-      model: "gpt-3.5-turbo",
+      model: "gpt-3.5-turbo-1106",
+      response_format: { "type": "json_object" },
       max_tokens: 700,
       messages: [
         {
