@@ -1,8 +1,23 @@
 # README
 
+## Table of Contents
+- [About this App](#about-this-app)
+- [Ruby Version](#ruby-version)
+- [System dependencies](#system-dependencies)
+- [Configuration](#configuration)
+- [Tests](#tests)
+- [Services](#services)
+- [OpenAi API Key](#get-your-own-openai-api-key-here-httpsopenaicom)
+- [Endpoints](#endpoints)
+   - [POST Endpoints](#post-endpoints)
+      - [AI Request](#apiv1ai_requests)
+- [Contributors](#contributors)
+
+## About this App
+
 This application is built as a microservice to handle communications with OpenAi specifically in the search for assistive technologies. A FE app or other service can call the endpoints to get data on technologies that can assist individuals with different kinds of disabilities. Data is formatted for ease of use by breaking each technology down into a different object with attributes describing the tech. 
 
-## Ruby version<br>
+## Ruby version <br>
 ruby 3.2.2
 
 ## System dependencies
@@ -30,11 +45,13 @@ ruby 3.2.2
 
 ## Endpoints
 ### POST Endpoints
-#### "/api/v1/ai_requests"
+#### "/api/v1/ai_requests" <br>
+example request: <br> ![Picture of example request.](example_request.png)<br>
 - pass params in the body of the request
 - required params {"tech_needs":[], "disability_description": []}
 - even if only 1 parameter is submitted the value for each key must be an Array
-- returns assistive technologies that the AI finds for the given tech needs and disability description
+- returns assistive technologies that the AI finds for the given tech needs and disability description <br>
+example response: <br> ![Picture of response.](example_response.png) <br>
 
 ## Contributors
 - Nick Spencer <a href="https://github.com/deadbert">@github.com/deadbert</a>
