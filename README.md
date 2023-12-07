@@ -53,6 +53,13 @@ example request: <br> ![Picture of example request.](example_request.png)<br>
 - returns assistive technologies that the AI finds for the given tech needs and disability description <br>
 example response: <br> ![Picture of response.](example_response.png) <br>
 
+### Get Endpoints
+#### "/api/v1/ai_requests" <br>
+example request: <br> ![Picture of example request.](example_tech_details_request.png)<br>
+- pass 1 parameter as a query parameter {tech: "name of technology"}
+- returns more detailed information for the queried technology from OpenAi <br>
+example response: <br> ![Picture of response.](example_tech_details_response.png) <br>
+
 ## Contributors
 - Nick Spencer <a href="https://github.com/deadbert">@github.com/deadbert</a>
 - Joop Stark <a href="https://github.com/JoopStark">@github.com/JoopStart</a>
