@@ -1,0 +1,117 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo-1106","response_format":{"type":"json_object"},"max_tokens":700,"messages":[{"role":"system","content":"You
+        are a helpful assistant."},{"role":"user","content":"Provide a detailed description
+        of JAWS(Job Access With Speech). Include the key features: compatibility,
+        versatility, and any professional features. Additionally, include the key
+        user experiences: reliability, performance, and community engagement. Ensure
+        the response is informative and covers various aspects of JAWS(Job Access
+        With Speech). Formated as a JSON like so {key_features =\u003e {compatability
+        =\u003e String, versatility =\u003e String, professional_features =\u003e
+        String}, user_experiences =\u003e {reliability =\u003e String, performance
+        =\u003e String, community_engagement =\u003e String}, detailed_description
+        =\u003e String} keys should be all lowercase"}]}'
+    headers:
+      Authorization:
+      - Bearer open_ai_key
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.12
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Dec 2023 21:11:19 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-1106
+      Openai-Organization:
+      - user-srbr3tydq7qzv8u1fvii8fnn
+      Openai-Processing-Ms:
+      - '7996'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '10000'
+      X-Ratelimit-Limit-Tokens:
+      - '60000'
+      X-Ratelimit-Limit-Tokens-Usage-Based:
+      - '60000'
+      X-Ratelimit-Remaining-Requests:
+      - '9999'
+      X-Ratelimit-Remaining-Tokens:
+      - '59133'
+      X-Ratelimit-Remaining-Tokens-Usage-Based:
+      - '59133'
+      X-Ratelimit-Reset-Requests:
+      - 8.64s
+      X-Ratelimit-Reset-Tokens:
+      - 867ms
+      X-Ratelimit-Reset-Tokens-Usage-Based:
+      - 867ms
+      X-Request-Id:
+      - 50ece38630e2c0a6ae7311010c90ea64
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=uFV.aBye640FkSS6lajmVZXBRFuVTatvYGD1bXwTsBo-1701983479-0-AbyJ2SZU3F/a0ki+jHwH7OaPGh9wW8jsVzYDRkZt7cE9rIZPGT/KFIARVisTXi7OOLqS90qvcIbl8UDrA40L0ps=;
+        path=/; expires=Thu, 07-Dec-23 21:41:19 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=KrVFT2BgM62eOEFs5yyFZmDQ1gwtuOERhZnupkBAgu8-1701983479858-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 831fc27a889c5179-DEN
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-8TFwFeRFO58S3PbFrVuH8qqdjYqt8",
+          "object": "chat.completion",
+          "created": 1701983471,
+          "model": "gpt-3.5-turbo-1106",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"key_features\": {\n    \"compatibility\": \"JAWS is compatible with Windows operating systems and works well with popular applications like Microsoft Office, Internet Explorer, and Adobe Acrobat.\",\n    \"versatility\": \"JAWS offers versatile customization options, supporting various languages, and allowing for personalized settings to accommodate different user preferences and needs.\",\n    \"professional_features\": \"JAWS includes advanced features such as Braille display support, OCR (Optical Character Recognition) capabilities, and robust scripting for automation and customization.\"\n  },\n  \"user_experiences\": {\n    \"reliability\": \"Users praise JAWS for its reliability in consistently providing access to digital content, applications, and web interfaces. It offers stable performance in various computing environments.\",\n    \"performance\": \"JAWS delivers high performance with its efficient speech synthesis and responsive navigation. It also ensures smooth interaction with complex interfaces and documents.\",\n    \"community_engagement\": \"JAWS has a strong community engagement with active forums, user groups, and regular updates and support from the developer, Freedom Scientific. There are also training resources and events for users.\"\n  },\n  \"detailed_description\": \"JAWS, or Job Access With Speech, is a leading screen reading software designed to provide access to digital content for individuals with visual impairments. It is compatible with Windows operating systems and boasts excellent compatibility with popular applications such as Microsoft Office, Internet Explorer, and Adobe Acrobat. JAWS offers versatility through its customization options, supporting multiple languages and allowing users to personalize settings according to their specific needs. Professional features such as Braille display support, OCR capabilities, and robust scripting make JAWS an advanced solution for accessibility needs. Users value JAWS for its reliability in consistently providing access to digital content and stable performance in various computing environments. The software also delivers high performance with efficient speech synthesis and responsive navigation, ensuring smooth interaction with complex interfaces and documents. Additionally, JAWS has a strong community engagement, offering active forums, user groups, regular updates, and support from the developer, Freedom Scientific. Training resources and events further enhance the user experience and promote community involvement.\"\n}"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 134,
+            "completion_tokens": 424,
+            "total_tokens": 558
+          },
+          "system_fingerprint": "fp_eeff13170a"
+        }
+  recorded_at: Thu, 07 Dec 2023 21:11:19 GMT
+recorded_with: VCR 6.2.0

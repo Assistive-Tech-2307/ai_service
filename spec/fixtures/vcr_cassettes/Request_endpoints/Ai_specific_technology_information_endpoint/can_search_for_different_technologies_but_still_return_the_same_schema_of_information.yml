@@ -1,0 +1,117 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo-1106","response_format":{"type":"json_object"},"max_tokens":700,"messages":[{"role":"system","content":"You
+        are a helpful assistant."},{"role":"user","content":"Provide a detailed description
+        of NVDA (NonVisual Desktop Access). Include the key features: compatibility,
+        versatility, and any professional features. Additionally, include the key
+        user experiences: reliability, performance, and community engagement. Ensure
+        the response is informative and covers various aspects of NVDA (NonVisual
+        Desktop Access). Formated as a JSON like so {key_features =\u003e {compatability
+        =\u003e String, versatility =\u003e String, professional_features =\u003e
+        String}, user_experiences =\u003e {reliability =\u003e String, performance
+        =\u003e String, community_engagement =\u003e String}, detailed_description
+        =\u003e String} keys should be all lowercase"}]}'
+    headers:
+      Authorization:
+      - Bearer open_ai_key
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.12
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Dec 2023 21:11:35 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-1106
+      Openai-Organization:
+      - user-srbr3tydq7qzv8u1fvii8fnn
+      Openai-Processing-Ms:
+      - '8973'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '10000'
+      X-Ratelimit-Limit-Tokens:
+      - '60000'
+      X-Ratelimit-Limit-Tokens-Usage-Based:
+      - '60000'
+      X-Ratelimit-Remaining-Requests:
+      - '9999'
+      X-Ratelimit-Remaining-Tokens:
+      - '59131'
+      X-Ratelimit-Remaining-Tokens-Usage-Based:
+      - '59131'
+      X-Ratelimit-Reset-Requests:
+      - 8.64s
+      X-Ratelimit-Reset-Tokens:
+      - 869ms
+      X-Ratelimit-Reset-Tokens-Usage-Based:
+      - 869ms
+      X-Request-Id:
+      - f84295d7f42d36adc59d03d4b557cdec
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=ffAyyWPeFniY2quWU2X80BcJp7hfffJfm2emywdGwQg-1701983495-0-AelQKaL1PRbMtlnwNW2jGGkaZQtCY6fsqcUayvcd9537SXGcCoK+XL+aO9ItcZXjhTWIKjrQfmdfZv8TDVAZdSo=;
+        path=/; expires=Thu, 07-Dec-23 21:41:35 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=4hXQJf.8CA0T4lYmqrsvpOLiCYhhPDcdW8bdAifPI4M-1701983495553-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 831fc2d65fd051e9-DEN
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-8TFwUBh1um3OsO2M6Gqw4hW2kI6Q8",
+          "object": "chat.completion",
+          "created": 1701983486,
+          "model": "gpt-3.5-turbo-1106",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"key_features\": {\n    \"compatibility\": \"NVDA is compatible with Windows operating systems (Windows 7, 8, 10, and 11) and can be used with popular applications such as web browsers, email clients, and office productivity software. It also works with a wide range of braille displays and has support for various languages.\",\n    \"versatility\": \"NVDA is a versatile screen reader that provides access to a wide variety of content including text, graphics, and controls. It offers customizable speech and braille output options to accommodate different user preferences. Additionally, it supports various input devices and provides flexible navigation features.\",\n    \"professional_features\": \"NVDA offers advanced features tailored for professional use, such as support for Microsoft Office applications, development tools, and mathematical equations. It also includes scripting capabilities for extending its functionality and integration with other assistive technologies.\"\n  },\n  \"user_experiences\": {\n    \"reliability\": \"NVDA is known for its reliability, with regular updates and bug fixes to ensure stable performance. It has a strong track record of accurately rendering content from different applications and websites. Users often commend its consistent performance and responsiveness.\",\n    \"performance\": \"NVDA is praised for its performance, delivering efficient screen reading and navigation. It provides responsive feedback and seamlessly interacts with user actions. Its customizable settings allow users to optimize performance based on their specific needs and preferences.\",\n    \"community_engagement\": \"The NVDA project has a thriving community of users, developers, and contributors. There are active forums, mailing lists, and social media channels where users can engage with each other, exchange knowledge, and seek support. The project encourages community involvement, and many users appreciate the collaborative and supportive environment.\"\n  },\n  \"detailed_description\": \"NVDA (NonVisual Desktop Access) is an open-source screen reader designed to provide access to digital content for individuals with visual impairments. It offers an extensive set of features that cater to both basic and professional needs. NVDA's compatibility with Windows operating systems and popular applications, along with support for multiple languages and braille displays, makes it accessible to a wide user base. Its versatility is evident in its ability to handle various types of content and provide customizable output options. Moreover, NVDA's professional features, such as support for specialized applications and scripting capabilities, make it a valuable tool for professional use. In terms of user experiences, NVDA is widely lauded for its reliability, consistent performance, and active community engagement. Its regular updates and bug fixes ensure reliable operation, while its responsive feedback and customizable settings contribute to a positive performance experience. The vibrant NVDA community offers users a valuable platform for interaction, support, and collaboration, enhancing the overall user experience.\"\n}"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 136,
+            "completion_tokens": 557,
+            "total_tokens": 693
+          },
+          "system_fingerprint": "fp_eeff13170a"
+        }
+  recorded_at: Thu, 07 Dec 2023 21:11:35 GMT
+recorded_with: VCR 6.2.0
