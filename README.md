@@ -2,6 +2,8 @@
 
 ## Table of Contents
 - [About this App](#about-this-app)
+- [Production Sites](#production-sites)
+- [Associated Repos](#associated-repos)
 - [Ruby Version](#ruby-version)
 - [System dependencies](#system-dependencies)
 - [Configuration](#configuration)
@@ -15,7 +17,17 @@
 
 ## About this App
 
-This application is built as a microservice to handle communications with OpenAi specifically in the search for assistive technologies. A FE app or other service can call the endpoints to get data on technologies that can assist individuals with different kinds of disabilities. Data is formatted for ease of use by breaking each technology down into a different object with attributes describing the tech. 
+This application is built as a microservice to handle communications with OpenAi specifically in the search for assistive technologies. A FE app or other service can call the endpoints to get data on technologies that can assist individuals with different kinds of disabilities. Data is formatted for ease of use by breaking each technology down into a different object with attributes describing the tech.
+
+## Production Sites
+- [User Service Production](https://nameless-stream-88171-cdff591c89ed.herokuapp.com/)
+- [AI Service Production](https://dashboard.heroku.com/apps/assistivie-tech-2307)
+- [AT Finder Production](https://at-finder.vercel.app/)
+
+## Associated Repos
+- [AI Service Repo](https://github.com/Assistive-Tech-2307/ai_service)
+- [AT Finder Repo](https://github.com/Assistive-Tech-2307/at-finder)
+- [Organization Profile](https://github.com/Assistive-Tech-2307)
 
 ## Ruby version <br>
 ruby 3.2.2
