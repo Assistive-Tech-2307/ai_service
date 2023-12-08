@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :ai_requests, only: [:create]
+      resources :ai_requests, only: [:create, :index]
     end
   end
 end

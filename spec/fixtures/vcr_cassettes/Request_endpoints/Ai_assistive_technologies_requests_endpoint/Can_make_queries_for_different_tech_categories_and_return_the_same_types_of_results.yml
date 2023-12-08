@@ -1,0 +1,114 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo-1106","response_format":{"type":"json_object"},"max_tokens":700,"messages":[{"role":"system","content":"You
+        are a helpful assistant."},{"role":"user","content":"Finish your thought,
+        but please provide a cross-platform list of CCTV for people who have low vision.
+        Please provide a definition of each tool and a website for further exploration.
+        Format your whole response as a valid JSON object, with each tech and it''s
+        information being a separate nested object in the technologies array like
+        so {''technologies''=\u003e[{''name''=\u003e''tool_name'', ''definition''=\u003e''tool_definition'',
+        ''website''=\u003e''tool_website''}]}"}]}'
+    headers:
+      Authorization:
+      - Bearer open_ai_key
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.12
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Dec 2023 20:00:58 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-1106
+      Openai-Organization:
+      - user-srbr3tydq7qzv8u1fvii8fnn
+      Openai-Processing-Ms:
+      - '4540'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '10000'
+      X-Ratelimit-Limit-Tokens:
+      - '60000'
+      X-Ratelimit-Limit-Tokens-Usage-Based:
+      - '60000'
+      X-Ratelimit-Remaining-Requests:
+      - '9998'
+      X-Ratelimit-Remaining-Tokens:
+      - '59182'
+      X-Ratelimit-Remaining-Tokens-Usage-Based:
+      - '59182'
+      X-Ratelimit-Reset-Requests:
+      - 9.423s
+      X-Ratelimit-Reset-Tokens:
+      - 818ms
+      X-Ratelimit-Reset-Tokens-Usage-Based:
+      - 818ms
+      X-Request-Id:
+      - c642fd189de2f4b8a471a60eeab9f2dd
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=KxGSxREGQcoi8bqdiE0XnGVwgvpOfA6deTavvQDqH5E-1701979258-0-AUmEFOpTDtoYfUZ7c8HNU+Qwp9xh0dKUvG6ZsEf65SolCySbewOlxOTf/ptO8FnXPWK3ReWIbw4D0ouqXCBe0zM=;
+        path=/; expires=Thu, 07-Dec-23 20:30:58 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=Mqxzfy4MQAixmrVj4jy0bcvt0Bj7vUS9HN1rjr1r3oY-1701979258981-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 831f5b835b81537f-DEN
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-8TEqEQ7cWF1mcfLL8Xe4BfK1Rxc3a",
+          "object": "chat.completion",
+          "created": 1701979254,
+          "model": "gpt-3.5-turbo-1106",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"technologies\": [\n    {\n      \"name\": \"OrCam MyEye\",\n      \"definition\": \"An advanced artificial vision device that allows people with low vision to understand text and recognize faces through audio feedback. It is worn like a pair of glasses and can read printed and digital text, as well as recognize and identify faces.\",\n      \"website\": \"https://www.orcam.com/\"\n    },\n    {\n      \"name\": \"eSight\",\n      \"definition\": \"A wearable device designed to help people with low vision achieve better visual acuity. It uses high-resolution cameras and advanced computer algorithms to provide real-time image enhancement and magnification, allowing users to see more clearly.\",\n      \"website\": \"https://www.esighteyewear.com/\"\n    },\n    {\n      \"name\": \"NuEyes\",\n      \"definition\": \"Smart glasses that provide assistive technology for individuals with visual impairments. It features a high-definition camera and a small display that can enhance the user's remaining vision, offering zoom and contrast adjustment capabilities.\",\n      \"website\": \"https://nueyes.com/\"\n    }\n  ]\n}"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 103,
+            "completion_tokens": 230,
+            "total_tokens": 333
+          },
+          "system_fingerprint": "fp_eeff13170a"
+        }
+  recorded_at: Thu, 07 Dec 2023 20:00:58 GMT
+recorded_with: VCR 6.2.0
