@@ -13,6 +13,7 @@
 - [Endpoints](#endpoints)
    - [POST Endpoints](#post-endpoints)
       - [AI Request](#apiv1ai_requests)
+      - [Message Request](#apiv1messages)
 - [Contributors](#contributors)
 
 ## About this App
@@ -55,6 +56,17 @@ ruby 3.2.2
 `open_ai:`<br>
 &nbsp; `key: "Your key here"`
 
+#### Sign up for a Twilio free trial [here](https://login.twilio.com/u/signup?state=hKFo2SBjNm1uQk1icUVnZ2VFS0J5SkI2a3dqM29ndW1qbTlHS6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIHFHOVNodVRNWG9SU1NaQXczRzdfRnZBeXB6Ymc0WVcyo2NpZNkgTW05M1lTTDVSclpmNzdobUlKZFI3QktZYjZPOXV1cks)
+- you will need an account-sid, auth-token, and a phone number
+- hide this by typing `EDITOR="code --wait" rails credentials:edit`
+- when the file opens save your new information as<br>
+```
+twilio:
+   account_sid: ACCOUNT_SID_HERE
+   auth_token: ACCOUNT_TOKEN_HERE
+   phone_number: PHONE_NUMBER_HERE
+```
+
 ## Endpoints
 ### POST Endpoints
 #### "/api/v1/ai_requests" <br>
@@ -64,6 +76,26 @@ example request: <br> ![Picture of example request.](example_request.png)<br>
 - even if only 1 parameter is submitted the value for each key must be an Array
 - returns assistive technologies that the AI finds for the given tech needs and disability description <br>
 example response: <br> ![Picture of response.](example_response.png) <br>
+
+#### "/api/v1/messages" <br>
+example request:
+```
+{
+    "user_phone_number": "+13038830579",
+    "title": "NVDA (NonVisual Desktop Access)"
+}
+```
+- pass in the user's phone number and title of the tech
+- receieve text message with more detailed information about a tech
+
+successful response:
+```
+{
+   "message": "Message successfully sent!"
+}
+```
+
+DISCLAIMER: Due to the nature of trial Twilio accounts this currently only works when sending to a specific number (one that has been verified). In order to be useful in a larger instance the account would need to be taken out of trial mode.
 
 ### Get Endpoints
 #### "/api/v1/ai_requests" <br>
